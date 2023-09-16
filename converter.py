@@ -30,7 +30,7 @@ result_currency = input('Введите итоговую валюту: ').upper(
 while not result_currency in CURRENCIES:
     result_currency = input('Введите итоговую валюту, которая присутствует в списке: ').upper()
 amount = input('Введите количество: ')
-while not amount.isdigit():
+while amount.isalpha():
     amount = input('Введите корректное количество: ')
 result = convert(float(amount), current_currency, result_currency, CURRENCIES)
 
